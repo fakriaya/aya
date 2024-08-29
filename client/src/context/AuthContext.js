@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const data = await login(email, password);
       setUser(data.user); // Sauvegarde les infos de l'utilisateur
-      localStorage.setItem('token', data.token); // Sauvegarde le token
+      localStorage.setItem('token', data.token); // Sauvegarde le token dans le localStorage
     } catch (error) {
       console.error('Erreur de connexion', error);
     }
